@@ -29,26 +29,42 @@ Work through these steps in order. Each one keeps your working code safe while y
 
 **Who does what:** the AI reads your code, drafts text and makes changes when you ask. You decide what to keep, test everything, and are responsible for what you hand in.
 
-| Step | You do | The AI does |
+| Step | You | The AI |
 |---|---|---|
-| **1. Save a working version** | If your code isn't in GitHub yet, put all of it in one repository. Then commit the version that runs on your module today. This is your safe point: you can always go back to it. | Nothing. |
-| **2. Make a branch** | Make a branch: a separate copy of your code where you can make changes without touching the version you saved in step 1. Make all the changes below on this branch. The lab keeps running from your main version until you've tested the branch and merged it back. | Nothing. |
-| **3. Ask AI to check your code** | Open your repository in an AI coding tool that can read your files, such as Claude Code. Paste the prompt below. Read the answer and check it against what you know about your module. This list is your plan for making the changes. | Checks your code against each standard and lists the smallest changes. It doesn't change anything yet. |
-| **4. Draft your module's information** | In the same tool, paste the prompt below. Then go through the draft yourself. Fill in what the code can't show (maintenance, known issues, where you buy supplies) and correct anything it got wrong. | Drafts `docs/MODULE_INFO.md` from your code and marks anything it guessed or couldn't find. |
-| **5. Make the changes one at a time** | On your branch, work through the checklist in order. For each item, paste the prompt below. Read what it changed before you keep it. Test the change without hardware, then commit it with a short note saying what changed. If something breaks, go back to your last commit. | Makes the changes for that one item, without changing what the hardware does unless you agree. |
-| **6. Test on the hardware, then merge** | When the checklist is done, run a short, real workflow from your branch, with someone watching who can stop the module. Start with steps that are easy to recover from, such as a single move or a dispense of water. If it all works, merge the branch into main. If not, fix it on the branch, or go back to the version you saved in step 1. | Nothing on the hardware: only you run it. It can help you fix problems you find. |
-| **7. Hand in** | Send a link to your repository's main branch, as described in [What to hand in](#what-to-hand-in-by-december-11-2026). | Nothing. |
+| 1. Save a working version | Commit the code that runs today | Nothing |
+| 2. Make a branch | Make all changes on a branch | Nothing |
+| 3. Check your code | Paste the prompt; check its answer | Checks your code against the standards and lists the changes |
+| 4. Draft your module's information | Paste the prompt; fill in and correct the draft | Drafts it from your code, marking guesses |
+| 5. Make the changes | One item at a time: read, test, commit | Makes the changes for one item |
+| 6. Test on hardware, then merge | Run a real workflow with someone watching | Nothing on the hardware |
+| 7. Hand in | Send your repository link | Nothing |
 
-**Step 3 prompt:**
+### The steps in detail
 
-> Read the standards in https://github.com/AC-SDL4/integration/blob/main/requirements/up-to-date-code.md and check my repository against each one. For each one, say met, partly met or not met, and point to the files. Then list the smallest changes that would meet each one, in the order of the checklist. Don't change anything yet.
+1. **Save a working version.** If your code isn't in GitHub yet, put all of it in one repository. Then commit the version that runs on your module today. This is your safe point: you can always go back to it.
 
-**Step 4 prompt:**
+2. **Make a branch.** A branch is a separate copy of your code where you can make changes without touching the version you saved in step 1. Make all the changes below on this branch. The lab keeps running from your main version until you've tested the branch and merged it back.
 
-> Copy https://github.com/AC-SDL4/integration/blob/main/template/MODULE_INFO.md into my repository as docs/MODULE_INFO.md, and fill it in from my code, following https://github.com/AC-SDL4/integration/blob/main/requirements/information-required.md and laid out like https://github.com/AC-SDL4/integration/blob/main/examples/lash-e/MODULE_INFO.md. Mark anything you guessed or couldn't find.
+3. **Ask AI to check your code.** Open your repository in an AI coding tool that can read your files, such as Claude Code, and paste:
 
-**Step 5 prompt:**
+   > Read the standards in https://github.com/AC-SDL4/integration/blob/main/requirements/up-to-date-code.md and check my repository against each one. For each one, say met, partly met or not met, and point to the files. Then list the smallest changes that would meet each one, in the order of the checklist. Don't change anything yet.
 
-> Make the changes for [item name] only. This code runs real hardware, so don't change what the hardware does (moves, positions, speeds, order of steps) without asking me.
+   Read the answer and check it against what you know about your module. This list is your plan for making the changes.
+
+4. **Draft your module's information.** In the same tool, paste:
+
+   > Copy https://github.com/AC-SDL4/integration/blob/main/template/MODULE_INFO.md into my repository as docs/MODULE_INFO.md, and fill it in from my code, following https://github.com/AC-SDL4/integration/blob/main/requirements/information-required.md and laid out like https://github.com/AC-SDL4/integration/blob/main/examples/lash-e/MODULE_INFO.md. Mark anything you guessed or couldn't find.
+
+   Then go through it yourself. The code can't tell the AI about maintenance, known issues or where you buy supplies, so fill those in and correct anything it got wrong.
+
+5. **Make the changes one at a time.** On your branch, work through the [checklist](requirements/up-to-date-code.md) in order. For each item, paste:
+
+   > Make the changes for [item name] only. This code runs real hardware, so don't change what the hardware does (moves, positions, speeds, order of steps) without asking me.
+
+   Read what it changed before you keep it. Test the change without hardware, then commit it with a short note saying what changed. If something breaks, you can go back to your last commit.
+
+6. **Test on the hardware, then merge.** When the checklist is done, run a short, real workflow from your branch, with someone watching who can stop the module. Start with steps that are easy to recover from, such as a single move or a dispense of water. If it all works, merge the branch into main. If not, fix it on the branch, or go back to the version you saved in step 1.
+
+7. **Hand in.** Send a link to your repository's main branch, as described in [What to hand in](#what-to-hand-in-by-december-11-2026).
 
 If your AI tool can't open links, download this repository and give it the files instead.
