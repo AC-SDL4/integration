@@ -21,7 +21,9 @@ Some words, such as *module*, *state*, *unit operation* and *flow*, have a speci
 1. **Your module's information:** copy [template/MODULE_INFO.md](template/MODULE_INFO.md) into your repository as `docs/MODULE_INFO.md` and fill it in, laid out like the [Lash-E example](examples/lash-e/MODULE_INFO.md).
 2. **Your repository:** brought up to the [Up-to-Date Code](requirements/up-to-date-code.md) standards.
 
-Both live in your own repository, so you hand in one thing: a link to its main branch. Send the link, and any questions, by opening an issue in this repository or messaging Owen on Slack.
+Both live in your own repository, so you hand in one thing: a link to its main branch. Send the link to Owen on Slack. Your repository can stay private; nothing about your module goes into this one.
+
+Questions about the requirements are welcome as issues in this repository (they are public) or on Slack.
 
 ## How to do this
 
